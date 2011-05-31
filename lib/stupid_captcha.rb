@@ -1,4 +1,8 @@
+require 'RMagick'
+
 module StupidCaptcha
+  GEM_ROOT = File.join(File.dirname(__FILE__), '..')
+
   mattr_accessor :fonts_path
   @@fonts_path = File.join(GEM_ROOT, 'assets/fonts').to_s
   mattr_accessor :fonts
@@ -80,12 +84,12 @@ module StupidCaptcha
     end
 
     def reset
-      text = random_string(rand(3)+5)
-      hash = encrypt(text, salt)
-      img = render
+      @text = random_string(rand(3)+5)
+      @hash = encrypt(text, salt)
+      @img = render
     end
 
-    def tp_blob
+    def to_blob
       img.to_blob
     end
 
