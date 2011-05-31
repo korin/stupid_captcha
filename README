@@ -1,0 +1,43 @@
+About
+=====================================
+Simple stupid captcha.
+
+
+
+Settings
+=====================================
+create file config/stupid_captcha.rb and set StupidCaptcha settings
+
+    StupidCaptcha.setup do |config|
+      # fonts path, point to directory, default GEM_RROT/assets/fonts
+      config.fonts_path = Rails.root.join('artwork/fonts').to_s
+
+      # set fonts array directly (fonts_path is not used), you can find default fonts in GEM_RROT/assets/fonts
+      config.fonts = [
+          Rails.root.join('artwork/fonts/1.ttf').to_s
+        ]
+
+      # backgrounds path, point to directory, default GEM_RROT/assets/backgrounds
+      config.backgrounds_path = Rails.root.join('artwork/backgrounds').to_s
+
+      # set backgrounds array directly (backgrounds_path is not used), you can find default fonts in GEM_RROT/assets/backgrounds
+      config.backgrounds = [
+          Rails.root.join('artwork/backgrounds/1.png').to_s
+        ]
+
+    end
+$ rake secret
+
+
+
+        send_data captcha.to_blob, :filename => "#{captcha.hash}.png",
+          :disposition => 'inline',
+          :type => "image/png"
+
+
+Help
+=====================================
+Looking for help?
+try:
+or email to me: lisukorin [at] gmail [dot] com,
+  don't forget write 'stupid captcha' in subject or my mail client will treat your message as spam.
