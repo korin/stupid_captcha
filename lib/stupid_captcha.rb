@@ -14,7 +14,7 @@ module StupidCaptcha
   @@backgrounds = nil
 
   mattr_accessor :colors
-  @@colors = %w(black red green blue)
+  @@colors = %w(black)
 
   mattr_accessor :salt
   @@salt = nil

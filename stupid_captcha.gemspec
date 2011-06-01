@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.homepage    = ""
   s.summary     = %q{simple stupid captcha}
   s.description = %q{simple stupid captcha}
+  s.license = 'MIT'
 
   s.rubyforge_project = "stupid_captcha"
 
