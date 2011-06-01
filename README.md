@@ -12,11 +12,12 @@ Simple stupid captcha, use it with flash.
 # settings
 
 create file config/stupid_captcha.rb and set StupidCaptcha settings
-user rake secret to generate some goog salt
+
+use rake secret to generate some good salt
 
     if defined?(StupidCaptcha)
       StupidCaptcha.setup do |config|
-        # fonts path, point to directory, default GEM_RROT/assets/fonts
+        # salt, use rake secret to generate goog salt
         config.salt = "5b213328a3ed873013c553f15......."
 
         # fonts path, point to directory, default GEM_RROT/assets/fonts
@@ -90,6 +91,7 @@ user rake secret to generate some goog salt
 # Help
 
 Looking for help?
-try:
-or email to me: lisukorin [at] gmail [dot] com, 
+
+email to me: lisukorin [at] gmail [dot] com, 
+
 don't forget write 'stupid captcha' in subject or my mail client will treat your message as spam.
