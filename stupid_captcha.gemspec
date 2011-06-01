@@ -9,11 +9,9 @@ Gem::Specification.new do |s|
   s.authors     = ["Rafał Lisowski"]
   s.email       = ["lisukorin@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{simple stupid captcha}
+  s.summary     = %q{simple stupid captcha to use with flash}
   s.description = %q{simple stupid captcha}
   s.license = 'MIT'
-
-  s.rubyforge_project = "stupid_captcha"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
