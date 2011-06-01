@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Rafał Lisowski"]
   s.email       = ["lisukorin@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/korin/stupid_captcha"
   s.summary     = %q{simple stupid captcha to use with flash}
   s.description = %q{simple stupid captcha}
   s.license = 'MIT'
